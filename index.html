@@ -1,0 +1,94 @@
+Descrizione dei Principali Aspetti Progettuali
+
+Il progetto presentato combina un file HTML e uno CSS per creare una pagina web incentrata sulla sostenibilità e sui documenti scaricabili relativi alle performance ESG (Environmental, Social, and Governance). Di seguito viene fornita una descrizione dettagliata degli aspetti progettuali principali.
+
+1. Struttura HTML
+
+    Elementi di Base
+    <!DOCTYPE html>: Specifica che il documento è scritto in HTML5.
+    <html lang="it">: Indica che la lingua principale del contenuto è l'italiano.
+    <head>: Contiene metadati come il set di caratteri ('UTF-8'), il viewport per la responsività su dispositivi mobili e i collegamenti ai file CSS esterni.
+    Meta tag 'viewport: Assicura che la pagina sia responsive, adattandosi alla larghezza del dispositivo.
+    Font Awesome: Importa icone vettoriali utilizzate per migliorare l'aspetto visivo.
+    File CSS personalizzato ('style.css'): Contiene gli stili specifici per il sito.
+    Sezione '<body>'
+    La sezione '<body>' contiene tutto il contenuto visibile della pagina, organizzato in tre macro-sezioni principali:
+    1. '<header>': Intestazione della pagina.
+    2. '<main>': Contenuto principale.
+    3. '<footer>': Piè di pagina.
+
+2. Sezione '<header>'
+    Classe '.hero-header':
+    Sfondo con gradiente verde, centrato verticalmente e orizzontalmente.
+    Include un'icona ('fa-seedling') rappresentativa della sostenibilità, animata con un effetto pulsante.
+    Titolo principale ('<h1>') e breve descrizione ('<p>') accompagnati da icone tematiche (es. 'fa-earth-europe').
+
+3. Sezione '<main>'
+    Classe '.download-section':
+        Contiene un titolo ('<h2>') che introduce i documenti disponibili.
+        Utilizza una griglia flessibile ('.report-grid') per organizzare le card dei report.
+    Card dei Report ('.report-card'):
+        Ogni card rappresenta un singolo report, con:
+        Icona tematica ('fa-leaf').
+        Titolo del report ('<h3>').
+        Descrizione accompagnata da un'icona ('fa-chart-line').
+        Pulsante di download ('<a>' con classe '.download-btn'), che include un'icona ('fa-download') e testo descrittivo.
+        Effetto hover che solleva leggermente la card per migliorare l'interattività.
+
+4. Sezione '<footer>'
+    Classe '.footer':
+        Sfondo scuro con testo bianco, posizionato in fondo alla pagina grazie a 'margin-top: auto'.
+        Contiene una griglia ('.certifications-grid') che organizza le certificazioni in colonne.
+    Certificazioni ('.certification-column'):
+        Ogni colonna elenca certificazioni relative a standard ambientali, sociali e di governance.
+        Le certificazioni sono accompagnate da icone tematiche ('fa-certificate', 'fa-recycle').
+
+5. Stile CSS
+    Reset Generale
+        Rimozione di margini e padding predefiniti per garantire coerenza tra browser.
+        Impostazione di 'box-sizing: border-box' per includere padding e bordi nelle dimensioni totali degli elementi.
+    Stile Globale
+        Font: Utilizzo di ''Segoe UI'', 'system-ui' e 'sans-serif' per garantire leggibilità.
+        Colore del Testo: Testo principale in grigio scuro ('#333'), sfondo chiaro ('#f8f9fa').
+        Altezza Minima: Il corpo della pagina occupa almeno l'intera altezza della finestra ('min-height: 100vh').
+    Intestazione ('.hero-header')
+        Gradiente verde come sfondo, con ombra sottile per dare profondità.
+        Animazione pulsante per l'icona principale.
+
+Griglia dei Report ('.report-grid')
+    Layout flessibile con spaziatura uniforme tra gli elementi.
+    Card responsive, che si adattano alla larghezza dello schermo.
+
+Pulsante di Download ('.download-btn')
+    Design moderno con sfondo verde, bordi arrotondati e transizione fluida.
+    Effetto hover che cambia il colore di sfondo e aggiunge un'ombra più evidente.
+
+Footer ('.footer')
+    Layout organizzato in colonne flessibili, con spaziatura adeguata.
+    Certificazioni raggruppate in due colonne, con icone e testo descrittivo.
+
+Media Queries
+    Adattamento del layout per diverse risoluzioni:
+        Su schermi fino a 1024px, le colonne delle certificazioni diventano più strette.
+        Su schermi fino a 768px, il titolo dell'intestazione si riduce, le card occupano l'intera larghezza e le colonne delle certificazioni si impilano.
+        Su schermi fino a 480px, il pulsante di download e il padding delle sezioni si riducono per ottimizzare lo spazio.
+
+6. Funzionalità Responsive
+
+Il design è completamente responsive, grazie a:
+    Viewport Meta Tag: Garantisce che la pagina si adatti alla larghezza del dispositivo.
+    Media Queries: Modificano dinamicamente il layout in base alla risoluzione dello schermo.
+    Flexbox: Organizza gli elementi in modo flessibile, permettendo loro di andare a capo quando necessario.
+
+7. Animazioni e Interattività
+    Animazione Pulsante: L'icona principale nell'intestazione pulsa continuamente, attirando l'attenzione dell'utente.
+    Effetto Hover: Le card dei report e il pulsante di download reagiscono al passaggio del mouse, migliorando l'esperienza utente.
+
+8. Accessibilità e Usabilità
+    Icône Tematiche: Migliorano la comprensione visiva del contenuto.
+    Testo Descrittivo: Accompagna le icone per chiarire il significato.
+    Contrasto Adeguato: Colori scelti per garantire leggibilità e accessibilità.
+
+Conclusione
+
+Il progetto combina un design moderno, funzionalità responsive e interattività per creare un'esperienza utente coinvolgente. La struttura HTML è ben organizzata, mentre il CSS garantisce un layout pulito e adattabile a diverse risoluzioni. L'uso di icone e animazioni contribuisce a rendere il sito visivamente accattivante e facile da navigare.

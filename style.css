@@ -1,0 +1,384 @@
+/* 
+ * Reset generale per tutti gli elementi:
+ * - margin: 0; rimuove i margini predefiniti di tutti gli elementi.
+ * - padding: 0; rimuove il padding predefinito di tutti gli elementi.
+ * - box-sizing: border-box; assicura che il padding e il bordo siano inclusi nella larghezza/ altezza totale degli elementi.
+ */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+ * Stile globale per il corpo della pagina:
+ * - font-family: imposta il font principale della pagina.
+ * - line-height: 1.6; migliora la leggibilità del testo con un'altezza di linea adeguata.
+ * - color: #333; imposta il colore del testo principale.
+ * - background: #f8f9fa; imposta uno sfondo chiaro per la pagina.
+ * - min-height: 100vh; assicura che il corpo occupi almeno l'intera altezza della finestra.
+ * - display: flex; e flex-direction: column; organizzano il layout in una colonna verticale.
+ */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 
+ * Stile per l'intestazione principale (hero-header):
+ * - background: crea un gradiente verde come sfondo.
+ * - padding: aggiunge spazio interno per separare il contenuto dai bordi.
+ * - text-align: center; centra il testo orizzontalmente.
+ * - color: white; imposta il colore del testo su bianco.
+ * - box-shadow: aggiunge un'ombra sottile per dare profondità.
+ */
+.hero-header {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* 
+ * Stile per il titolo principale nell'intestazione:
+ * - font-size: imposta la dimensione del carattere.
+ * - margin-bottom: aggiunge spazio sotto il titolo.
+ * - font-weight: rende il testo più spesso.
+ * - text-shadow: aggiunge un'ombra al testo per migliorare la visibilità.
+ */
+.hero-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 
+ * Stile per la sezione di download:
+ * - max-width: limita la larghezza massima della sezione.
+ * - margin: auto; centra la sezione orizzontalmente.
+ * - padding: aggiunge spazio interno ai lati.
+ * - width: 100%; assicura che la sezione occupi tutta la larghezza disponibile.
+ */
+.download-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+/* 
+ * Stile per la griglia dei report:
+ * - display: flex; abilita il layout flessibile.
+ * - flex-wrap: wrap; permette agli elementi di andare a capo se necessario.
+ * - gap: aggiunge spazio tra gli elementi.
+ * - justify-content: distribuisce uniformemente gli elementi.
+ */
+.report-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
+/* 
+ * Stile per le card dei report:
+ * - background: imposta lo sfondo bianco.
+ * - border-radius: arrotonda gli angoli.
+ * - padding: aggiunge spazio interno.
+ * - box-shadow: aggiunge un'ombra sottile.
+ * - transition: anima il movimento quando si passa sopra con il mouse.
+ * - border: aggiunge un bordo sottile.
+ * - flex: definisce la flessibilità delle card.
+ */
+.report-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.1);
+    flex: 1 1 768px;
+    min-width: 0;
+}
+
+/* 
+ * Effetto hover per le card dei report:
+ * - transform: solleva leggermente la card quando ci si passa sopra.
+ */
+.report-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 
+ * Stile per l'intestazione delle card:
+ * - display: flex; organizza gli elementi in riga.
+ * - align-items: center; allinea verticalmente gli elementi.
+ */
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+/* 
+ * Stile per l'icona delle card:
+ * - font-size: imposta la dimensione dell'icona.
+ * - color: imposta il colore verde.
+ * - margin-right: aggiunge spazio tra l'icona e il testo.
+ */
+.card-icon {
+    font-size: 1.8rem;
+    color: #2ecc71;
+    margin-right: 1rem;
+}
+
+/* 
+ * Stile per il pulsante di download:
+ * - display: inline-flex; organizza il contenuto in riga.
+ * - align-items: center; allinea verticalmente il testo e l'icona.
+ * - padding: aggiunge spazio interno.
+ * - background: imposta il colore di sfondo verde.
+ * - color: imposta il colore del testo su bianco.
+ * - border-radius: arrotonda gli angoli.
+ * - transition: anima il cambiamento di colore.
+ */
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    background: #2ecc71;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+    justify-content: center;
+}
+
+/* 
+ * Stile per l'icona all'interno del pulsante di download:
+ * - margin-right: aggiunge spazio tra l'icona e il testo.
+ */
+.download-btn i {
+    margin-right: 8px;
+}
+
+/* 
+ * Effetto hover per il pulsante di download:
+ * - background: cambia il colore di sfondo quando ci si passa sopra.
+ * - box-shadow: aggiunge un'ombra più evidente.
+ */
+.download-btn:hover {
+    background: #27ae60;
+    box-shadow: 0 4px 12px rgba(46,204,113,0.3);
+}
+
+/* 
+ * Stile per il footer:
+ * - background: imposta lo sfondo scuro.
+ * - color: imposta il colore del testo su bianco.
+ * - padding: aggiunge spazio interno.
+ * - margin-top: auto; spinge il footer verso il fondo della pagina.
+ */
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 3rem 2rem;
+    margin-top: auto;
+}
+
+/* 
+ * Stile per il contenuto del footer:
+ * - max-width: limita la larghezza massima.
+ * - margin: auto; centra il contenuto orizzontalmente.
+ * - display: flex; organizza il layout in riga.
+ * - gap: aggiunge spazio tra le sezioni.
+ */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+/* 
+ * Stile per ogni sezione del footer:
+ * - flex: definisce la flessibilità delle sezioni.
+ * - min-width: assicura una larghezza minima.
+ */
+.footer-section {
+    flex: 1 1 100%;
+    min-width: 300px;
+}
+
+/* 
+ * Stile per la griglia delle certificazioni:
+ * - display: flex; organizza le colonne in riga.
+ * - gap: aggiunge spazio tra le colonne.
+ * - flex-wrap: permette alle colonne di andare a capo.
+ */
+.certifications-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* 
+ * Stile per ogni colonna delle certificazioni:
+ * - flex: definisce la flessibilità delle colonne.
+ * - min-width: assicura una larghezza minima.
+ * - display: flex; organizza il contenuto in colonna.
+ * - gap: aggiunge spazio tra gli elementi.
+ */
+.certification-column {
+    flex: 1 1 300px;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* 
+ * Stile per i titoli delle sezioni del footer:
+ * - color: imposta il colore verde.
+ * - margin-bottom: aggiunge spazio sotto il titolo.
+ */
+.footer-section h3 {
+    color: #2ecc71;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+/* 
+ * Stile per i paragrafi nel footer:
+ * - margin-bottom: aggiunge spazio sotto il testo.
+ * - line-height: migliora la leggibilità.
+ */
+.footer-section p {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* 
+ * Media query per schermi fino a 1024px:
+ * - Modifica la larghezza delle colonne delle certificazioni.
+ */
+@media (max-width: 1024px) {
+    .certification-column {
+        flex-basis: 45%;
+    }
+}
+
+/* 
+ * Media query per schermi fino a 768px:
+ * - Riduce la dimensione del titolo nell'intestazione.
+ * - Adatta la larghezza delle card dei report.
+ * - Riduce lo spazio tra le colonne delle certificazioni.
+ */
+@media (max-width: 768px) {
+    .hero-header h1 {
+        font-size: 2rem;
+    }
+    
+    .report-card {
+        flex-basis: 100%;
+    }
+    
+    .certifications-grid {
+        gap: 1.5rem;
+    }
+    
+    .certification-column {
+        flex-basis: 100%;
+        min-width: 100%;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.1rem;
+    }
+    
+    .footer-section p {
+        font-size: 0.9rem;
+    }
+}
+
+/* 
+ * Media query per schermi fino a 480px:
+ * - Riduce la dimensione del pulsante di download.
+ * - Riduce il padding dell'intestazione e del footer.
+ * - Riduce lo spazio tra gli elementi delle certificazioni.
+ */
+@media (max-width: 480px) {
+    .download-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .hero-header {
+        padding: 3rem 1.5rem;
+    }
+    
+    .footer {
+        padding: 2rem 1.5rem;
+    }
+    
+    .certification-column {
+        gap: 0.8rem;
+    }
+}
+
+/* 
+ * Stile per il contenitore delle icone nell'intestazione:
+ * - animation: aggiunge un'animazione pulsante.
+ */
+.header-icon-container {
+    margin-bottom: 1.5rem;
+    animation: pulse 2s infinite;
+}
+
+/* 
+ * Stile per le icone grandi:
+ * - font-size: imposta la dimensione.
+ * - color: imposta il colore chiaro.
+ * - filter: aggiunge un'ombra per migliorare la visibilità.
+ */
+.icon-style {
+    font-size: 3.5rem;
+    color: #d4f7dc;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+/* 
+ * Stile per le icone verdi:
+ * - color: imposta il colore verde.
+ * - margin-right: aggiunge spazio tra l'icona e il testo.
+ */
+.icon-green {
+    color: #2ecc71;
+    margin-right: 0.5rem;
+}
+
+/* 
+ * Stile per le icone delle badge:
+ * - color: imposta il colore verde.
+ * - margin-right: aggiunge spazio tra l'icona e il testo.
+ * - font-size: riduce la dimensione dell'icona.
+ */
+.icon-badge {
+    color: #2ecc71;
+    margin-right: 0.8rem;
+    font-size: 0.9em;
+}
