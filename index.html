@@ -1,94 +1,128 @@
-Descrizione dei Principali Aspetti Progettuali
+<!DOCTYPE html>
+<!-- La dichiarazione DOCTYPE specifica che il documento è scritto in HTML5. -->
 
-Il progetto presentato combina un file HTML e uno CSS per creare una pagina web incentrata sulla sostenibilità e sui documenti scaricabili relativi alle performance ESG (Environmental, Social, and Governance). Di seguito viene fornita una descrizione dettagliata degli aspetti progettuali principali.
+<html lang="it">
+<!-- L'elemento <html> rappresenta la radice del documento HTML e l'attributo "lang" indica che la lingua principale del contenuto è l'italiano. -->
 
-1. Struttura HTML
+<head>
+    <!-- La sezione <head> contiene metadati sul documento, come il set di caratteri, il titolo della pagina e i collegamenti ai file CSS esterni. -->
 
-    Elementi di Base
-    <!DOCTYPE html>: Specifica che il documento è scritto in HTML5.
-    <html lang="it">: Indica che la lingua principale del contenuto è l'italiano.
-    <head>: Contiene metadati come il set di caratteri ('UTF-8'), il viewport per la responsività su dispositivi mobili e i collegamenti ai file CSS esterni.
-    Meta tag 'viewport: Assicura che la pagina sia responsive, adattandosi alla larghezza del dispositivo.
-    Font Awesome: Importa icone vettoriali utilizzate per migliorare l'aspetto visivo.
-    File CSS personalizzato ('style.css'): Contiene gli stili specifici per il sito.
-    Sezione '<body>'
-    La sezione '<body>' contiene tutto il contenuto visibile della pagina, organizzato in tre macro-sezioni principali:
-    1. '<header>': Intestazione della pagina.
-    2. '<main>': Contenuto principale.
-    3. '<footer>': Piè di pagina.
+    <meta charset="UTF-8">
+    <!-- Questo meta tag specifica che il set di caratteri utilizzato per il documento è UTF-8, che supporta la maggior parte dei caratteri delle lingue mondiali. -->
 
-2. Sezione '<header>'
-    Classe '.hero-header':
-    Sfondo con gradiente verde, centrato verticalmente e orizzontalmente.
-    Include un'icona ('fa-seedling') rappresentativa della sostenibilità, animata con un effetto pulsante.
-    Titolo principale ('<h1>') e breve descrizione ('<p>') accompagnati da icone tematiche (es. 'fa-earth-europe').
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Questo meta tag assicura che la pagina web sia responsive su dispositivi mobili, impostando la larghezza della viewport uguale alla larghezza del dispositivo e lo zoom iniziale a 1.0. -->
 
-3. Sezione '<main>'
-    Classe '.download-section':
-        Contiene un titolo ('<h2>') che introduce i documenti disponibili.
-        Utilizza una griglia flessibile ('.report-grid') per organizzare le card dei report.
-    Card dei Report ('.report-card'):
-        Ogni card rappresenta un singolo report, con:
-        Icona tematica ('fa-leaf').
-        Titolo del report ('<h3>').
-        Descrizione accompagnata da un'icona ('fa-chart-line').
-        Pulsante di download ('<a>' con classe '.download-btn'), che include un'icona ('fa-download') e testo descrittivo.
-        Effetto hover che solleva leggermente la card per migliorare l'interattività.
+    <title>Sustainability Hub - Unicredit</title>
+    <!-- Il tag <title> definisce il titolo della pagina, che viene visualizzato nella barra del titolo del browser o nella scheda della pagina. -->
 
-4. Sezione '<footer>'
-    Classe '.footer':
-        Sfondo scuro con testo bianco, posizionato in fondo alla pagina grazie a 'margin-top: auto'.
-        Contiene una griglia ('.certifications-grid') che organizza le certificazioni in colonne.
-    Certificazioni ('.certification-column'):
-        Ogni colonna elenca certificazioni relative a standard ambientali, sociali e di governance.
-        Le certificazioni sono accompagnate da icone tematiche ('fa-certificate', 'fa-recycle').
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Questo link importa le icone di Font Awesome, una libreria di icone vettoriali che possono essere utilizzate per migliorare l'aspetto visivo del sito. -->
 
-5. Stile CSS
-    Reset Generale
-        Rimozione di margini e padding predefiniti per garantire coerenza tra browser.
-        Impostazione di 'box-sizing: border-box' per includere padding e bordi nelle dimensioni totali degli elementi.
-    Stile Globale
-        Font: Utilizzo di ''Segoe UI'', 'system-ui' e 'sans-serif' per garantire leggibilità.
-        Colore del Testo: Testo principale in grigio scuro ('#333'), sfondo chiaro ('#f8f9fa').
-        Altezza Minima: Il corpo della pagina occupa almeno l'intera altezza della finestra ('min-height: 100vh').
-    Intestazione ('.hero-header')
-        Gradiente verde come sfondo, con ombra sottile per dare profondità.
-        Animazione pulsante per l'icona principale.
+    <link rel="stylesheet" href="style.css">
+    <!-- Questo link collega un file CSS esterno (style.css) che contiene gli stili personalizzati per il sito web. -->
+</head>
 
-Griglia dei Report ('.report-grid')
-    Layout flessibile con spaziatura uniforme tra gli elementi.
-    Card responsive, che si adattano alla larghezza dello schermo.
+<body>
+    <!-- La sezione <body> contiene tutto il contenuto visibile della pagina web. -->
 
-Pulsante di Download ('.download-btn')
-    Design moderno con sfondo verde, bordi arrotondati e transizione fluida.
-    Effetto hover che cambia il colore di sfondo e aggiunge un'ombra più evidente.
+    <header class="hero-header">
+        <!-- L'elemento <header> rappresenta l'intestazione della pagina, che spesso include il logo, il titolo principale e altre informazioni introduttive. -->
 
-Footer ('.footer')
-    Layout organizzato in colonne flessibili, con spaziatura adeguata.
-    Certificazioni raggruppate in due colonne, con icone e testo descrittivo.
+        <div class="header-icon-container">
+            <!-- Questo div contiene un'icona che rappresenta il tema principale del sito (in questo caso, la sostenibilità). -->
+            <i class="fas fa-seedling icon-style"></i>
+            <!-- L'icona "fa-seedling" rappresenta una piantina, simbolo di crescita e sostenibilità. -->
+        </div>
 
-Media Queries
-    Adattamento del layout per diverse risoluzioni:
-        Su schermi fino a 1024px, le colonne delle certificazioni diventano più strette.
-        Su schermi fino a 768px, il titolo dell'intestazione si riduce, le card occupano l'intera larghezza e le colonne delle certificazioni si impilano.
-        Su schermi fino a 480px, il pulsante di download e il padding delle sezioni si riducono per ottimizzare lo spazio.
+        <h1>Sostenibilità e Innovazione</h1>
+        <!-- Il tag <h1> rappresenta il titolo principale della pagina, che descrive il tema centrale del sito. -->
 
-6. Funzionalità Responsive
+        <p><i class="fas fa-earth-europe"></i> Scopri il nostro impegno per un futuro sostenibile</p>
+        <!-- Questo paragrafo fornisce una breve descrizione del sito, accompagnato da un'icona che rappresenta l'Europa, enfatizzando l'impegno per la sostenibilità. -->
+    </header>
 
-Il design è completamente responsive, grazie a:
-    Viewport Meta Tag: Garantisce che la pagina si adatti alla larghezza del dispositivo.
-    Media Queries: Modificano dinamicamente il layout in base alla risoluzione dello schermo.
-    Flexbox: Organizza gli elementi in modo flessibile, permettendo loro di andare a capo quando necessario.
+    <main class="download-section">
+        <!-- L'elemento <main> contiene il contenuto principale della pagina, che è unico per ogni pagina del sito. -->
 
-7. Animazioni e Interattività
-    Animazione Pulsante: L'icona principale nell'intestazione pulsa continuamente, attirando l'attenzione dell'utente.
-    Effetto Hover: Le card dei report e il pulsante di download reagiscono al passaggio del mouse, migliorando l'esperienza utente.
+        <h2>Documenti Disponibili</h2>
+        <!-- Il tag <h2> rappresenta un sottotitolo che introduce una sezione dedicata ai documenti scaricabili. -->
 
-8. Accessibilità e Usabilità
-    Icône Tematiche: Migliorano la comprensione visiva del contenuto.
-    Testo Descrittivo: Accompagna le icone per chiarire il significato.
-    Contrasto Adeguato: Colori scelti per garantire leggibilità e accessibilità.
+        <div class="report-grid">
+            <!-- Questo div rappresenta una griglia che contiene le card dei report disponibili per il download. -->
 
-Conclusione
+            <div class="report-card">
+                <!-- Ogni card rappresenta un singolo report con informazioni e un pulsante per il download. -->
 
-Il progetto combina un design moderno, funzionalità responsive e interattività per creare un'esperienza utente coinvolgente. La struttura HTML è ben organizzata, mentre il CSS garantisce un layout pulito e adattabile a diverse risoluzioni. L'uso di icone e animazioni contribuisce a rendere il sito visivamente accattivante e facile da navigare.
+                <div class="card-header">
+                    <!-- Questo div contiene l'intestazione della card, che include un'icona e il titolo del report. -->
+                    <i class="fas fa-leaf card-icon"></i>
+                    <!-- L'icona "fa-leaf" rappresenta una foglia, simbolo di natura e sostenibilità. -->
+                    <h3>Report Integrato 2024</h3>
+                    <!-- Il tag <h3> rappresenta il titolo del report. -->
+                </div>
+
+                <p><i class="fas fa-chart-line icon-green"></i> Scarica il rapporto completo sulle performance ESG</p>
+                <!-- Questo paragrafo descrive il contenuto del report, accompagnato da un'icona che rappresenta grafici e prestazioni. -->
+
+                <a href="report2024.pdf" class="download-btn">
+                    <!-- Il tag <a> crea un collegamento ipertestuale che permette all'utente di scaricare il file PDF del report. -->
+                    <i class="fas fa-download"></i> Scarica PDF
+                    <!-- L'icona "fa-download" rappresenta un pulsante di download. -->
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <!-- L'elemento <footer> rappresenta il piè di pagina del sito, che spesso include informazioni aggiuntive, come certificazioni o contatti. -->
+
+        <div class="footer-content">
+            <!-- Questo div contiene il contenuto principale del footer. -->
+
+            <div class="footer-section">
+                <!-- Questo div rappresenta una sezione del footer dedicata alle certificazioni. -->
+
+                <h3>Certificazioni</h3>
+                <!-- Il tag <h3> rappresenta il titolo della sezione delle certificazioni. -->
+
+                <div class="certifications-grid">
+                    <!-- Questo div rappresenta una griglia che organizza le certificazioni in colonne. -->
+
+                    <div class="certification-column">
+                        <!-- Ogni colonna contiene un elenco di certificazioni. -->
+
+                        <p><i class="fas fa-certificate icon-badge"></i> Second Party Opinion di ISS ESG</p>
+                        <!-- Questo paragrafo descrive una certificazione, accompagnato da un'icona che rappresenta un certificato. -->
+
+                        <p><i class="fas fa-recycle icon-badge"></i> ICMA Green Bond Principles (GBP) 2021</p>
+                        <!-- Questo paragrafo descrive una certificazione legata ai principi dei green bond, accompagnato da un'icona di riciclo. -->
+
+                        <p><i class="fas fa-certificate icon-badge"></i>ICMA Social Bond Principles (SBP) 2021</p>
+                        <!-- Questo paragrafo descrive una certificazione legata ai principi dei social bond. -->
+
+                        <p><i class="fas fa-recycle icon-badge"></i>ICMA Sustainability Bond Guidelines (SBG) 2021</p>
+                        <!-- Questo paragrafo descrive una certificazione legata alle linee guida per i bond di sostenibilità. -->
+                    </div>
+
+                    <div class="certification-column">
+                        <!-- Una seconda colonna di certificazioni. -->
+
+                        <p><i class="fas fa-certificate icon-badge"></i>EU Green Bond Standard (EU GBS)</p>
+                        <!-- Questo paragrafo descrive una certificazione legata agli standard europei per i green bond. -->
+
+                        <p><i class="fas fa-recycle icon-badge"></i>Technical Screening Criteria dell'EU Taxonomy Delegated Acts</p>
+                        <!-- Questo paragrafo descrive una certificazione legata ai criteri tecnici dell'UE per la tassonomia ambientale. -->
+
+                        <p><i class="fas fa-certificate icon-badge"></i>PCAF (Partnership for Carbon Accounting Financials)</p>
+                        <!-- Questo paragrafo descrive una certificazione legata alla partnership per la contabilità del carbonio. -->
+
+                        <p><i class="fas fa-recycle icon-badge"></i>SIAPE (Sistema Informativo sugli Attestati di Prestazione Energetica)</p>
+                        <!-- Questo paragrafo descrive una certificazione legata al sistema informativo per le prestazioni energetiche. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
